@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="utf-8">
+    <title>Site to Site VPN Configuration Builder</title>
+
+  </head>
+
+  <body>
+
+<form action="{{url_for('vpnbldr_results')}}" autocomplete="off">
+
+    <div class="container">
+      <div class="header clearfix">
+        <br>
+        <h3 class="text-muted">Site to Site VPN Config Builder</h3>
+      </div>
+       <hr>
+
+      <div class="row marketing">
+        <div class="col-lg-4">
+          
+
+          <h4>A Side Info</h4>
+          
+                <!-- Text input for A Side IP-->
+                                        <div class="form-group">
+                                <label for="asideip">A Side IP Address</label>  
+                                <div class="input-group input-group-md">
+                    <input id="asideip" name="asideip" type="text" placeholder="" class="form-control input-md" required="">
+    
+                                        </div>
+                                        </div>
+          
+                <!-- Text input for A side VRF name-->
+                                        <div class="form-group">
+                                <label for="asidevrf">A Side VRF Name</label>  
+                                <div class="input-group input-group-md">
+                    <input id="asidevrf" name="asidevrf" type="text" placeholder="" class="form-control input-md" required="">
+    
+                                        </div>
+                                        </div>
+
+                                         <!-- Text input for A side site name-->
+                                        <div class="form-group">
+                                <label for="asidesite">A Side Site Code</label>  
+                                <div class="input-group input-group-md">
+                    <input id="asidesite" name="asidesite" type="text" placeholder="" class="form-control input-md" required="">
+    
+                                        </div>
+                                        </div>
+</div>
+        
+
+                                <div class="col-lg-4">
+          <h4>Shared Info</h4>
+          <br>
+          <br>
+                <!-- Text input for PSK-->
+                                        <div class="form-group">
+                                <label for="psk">Pre-Shared Key</label>  
+                                <div class="input-group input-group-md">
+                    <input style="text-align:center; id="psk" name="psk" type="text" placeholder="" class="form-control input-md" required="">  
+                                        </div>
+                                        </div>
+       <!-- Text input for Tunnel Number-->
+                                        <div class="form-group">
+                                <label for="psk">Tunnel Interface Number</label>  
+                                <div class="input-group input-group-md">
+                    <input style="text-align:center; id="tunnumb" name="tunnumb" type="number" placeholder="" class="form-control input-md" required="">  
+                                        </div>
+                                        </div>
+
+</div>
+
+                 
+        <div class="col-lg-4">
+          <h4>Z Side Info</h4>
+          
+                <!-- Text input for Z Side IP-->
+                                        <div class="form-group">
+                                <label for="zsideip">Z Side IP Address</label>  
+                                <div class="input-group input-group-md">
+                    <input id="zsideip" name="zsideip" type="text" placeholder="" class="form-control input-md" required="">
+    
+                                        </div>
+                                        </div>
+          
+                <!-- Text input for Z side VRF name-->
+                                        <div class="form-group">
+                                <label for="zsidevrf">Z Side VRF Name</label>  
+                                <div class="input-group input-group-md">
+                    <input id="zsidevrf" name="zsidevrf" type="text" placeholder="" class="form-control input-md" required="">
+    
+                                        </div>
+                                        </div>
+
+                                         <!-- Text input for Z side site name-->
+                                        <div class="form-group">
+                                <label for="zsidesite">Z Side Site Code</label>  
+                                <div class="input-group input-group-md">
+                    <input id="zsidesite" name="zsidesite" type="text" placeholder="" class="form-control input-md" required="">
+    
+                                        </div>
+                                        </div>
+
+    </div> <!-- /container -->
+
+<!-- Button -->
+  <div class="form-group">
+    <label class="col-md-12 control-label" for="calcbutton"></label>
+    <div class="col-md-12">
+      <button id="calcbutton" name="calcbutton" class="btn btn-primary">CONFIG</button>
+    </div>
+  </div>
+
+</body>
+</html>
